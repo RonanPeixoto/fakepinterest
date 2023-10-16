@@ -6,7 +6,7 @@ import os
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidade.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SECRET_KEY"] = "f0f0ccade9f144f299f3ee5e1fe55f21"
 app.config["UPLOAD_FOLDER"] = "static/fotos_posts"
 
